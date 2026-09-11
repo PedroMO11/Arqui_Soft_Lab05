@@ -1,9 +1,6 @@
 # CONTEXT.md — Genius-x
 
-Domain context and glossary for Case Study #5 (Reliability Patterns / Fault
-Tolerance). This file is the frozen input for every other document in this
-repo. It is written once, from the assignment brief, and is not edited to
-make any later evaluation pass.
+Domain context and glossary for Case Study #5 (Reliability Patterns / Fault Tolerance). This file is the frozen input for every other document in this repo. It is written once, from the assignment brief, and is not edited to make any later evaluation pass.
 
 ---
 
@@ -72,11 +69,11 @@ Problems-to-solve section of later documents.
    of common questions, the LLM gives a different answer each day, even
    though the underlying facts have not changed.
 4. **Degraded behavior under peak load.** During the first week of each
-   month — the highest-incident-volume period — the LLM tends to not
+   month, the highest-incident-volume period, the LLM tends to not
    respond at all, or responds incorrectly, more often than during normal
    periods.
 5. **Stale status reads.** Support reports that Genius sometimes answers
-   with the status of an incident that was already closed hours earlier —
+   with the status of an incident that was already closed hours earlier,
    the answer does not reflect the current state of the incident.
 
 ---
