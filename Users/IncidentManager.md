@@ -1,4 +1,4 @@
-# Carlos Mendez — Incident Manager (On-call Lead)
+# Carlos Mendez - Incident Manager (On-call Lead)
 
 ## Role
 Oversees SLA compliance across all three escalation types and is the
@@ -35,20 +35,9 @@ system as a whole.
   of each month.
 
 ## Current pains
-- "We only found out what the LLM did after it had already deleted the
-  database — there was nothing stopping it beforehand."
-- No single place today to see whether SLAs are being met across all three
+- The LLM's tool actions are only discovered after the fact; nothing
+  stopped the destructive database deletion before it happened.
+- No single place today shows whether SLAs are being met across all three
   escalation types.
 - No visibility into the system during the first-week peak until Support or
   Engineering starts complaining.
-
-## What the system gives them
-- An administrable permission boundary for autonomous LLM tool actions.
-- A queryable, per-incident audit trail of every action the LLM executed.
-- An SLA-compliance view broken down by escalation type.
-- Load and error-rate visibility during peak periods.
-
-## Associated acceptance criteria
-R10 (configurable permission boundary) · R9 (complete tool-action audit
-trail) · R11 (SLA compliance visibility by escalation type) · R7, R8
-(peak-load observability and load shedding). See `REDALE.md` §R.

@@ -1,4 +1,4 @@
-# Elena Ruiz — Data Science Lead (LLM Owner)
+# Elena Ruiz - Data Science Lead (LLM Owner)
 
 ## Role
 Owns and operates the local LLM that powers Genius, including its training
@@ -12,7 +12,7 @@ engineers.
 1. She reviews reports from Support and Engineering about wrong, stale, or
    inconsistent LLM answers.
 2. She tries to determine whether a bad answer came from stale training
-   data, a genuine model limitation, or a harness/tooling gap — today she
+   data, a genuine model limitation, or a harness/tooling gap; today she
    has no way to tell these apart.
 3. She reviews what tool actions the LLM executed, especially after the
    incident where an LLM action deleted the database, to understand what
@@ -36,24 +36,9 @@ engineers.
   explainable, in order to report on reliability to the business.
 
 ## Current pains
-- "We gave the LLM a direct line to the database and Slack with no safety
-  net, and it used that line to delete the database."
-- "There's no way to tell whether a wrong answer is stale data or the model
-  actually not knowing."
-- "Users say the LLM 'isn't learning' — that's really several different
-  problems wearing one complaint."
-
-## What the system gives them
-- A permission boundary that limits which tool actions the LLM can execute
-  autonomously versus which require human approval.
-- A deterministic layer for known, recurring questions, so drift in those
-  answers is visible and fixable independently of full retraining.
-- Freshness guarantees on data the LLM reads, so stale-data errors are
-  distinguishable from model errors.
-- Observability into peak-load behavior to support capacity and reliability
-  planning.
-
-## Associated acceptance criteria
-R1, R10 (enforced, adjustable permission boundary) · R14 (root-cause
-traceability — stale data vs. model vs. harness) · R5 (recurring-question
-drift detection) · R7 (peak-load observability). See `REDALE.md` §R.
+- The LLM has direct, unguarded access to the database and Slack, and used
+  that access to delete the database with no safety net in place.
+- No way to tell whether a wrong answer comes from stale training data or a
+  genuine model limitation, so fixes are guesswork.
+- Complaints that the LLM isn't learning actually bundle several distinct
+  problems into one vague label, making the real cause hard to isolate.

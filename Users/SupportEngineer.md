@@ -1,4 +1,4 @@
-# Maria Torres — Support Engineer
+# Maria Torres - Support Engineer
 
 ## Role
 Front-line staff who receive problem reports from Customers. She tries to
@@ -16,7 +16,7 @@ inside Genius to look up incident information and to ask it to take action
    logs the resolution.
 4. If she cannot, she creates a Support Escalation (or, for a
    business-critical case, a Customer Escalation) and gives Genius's LLM
-   instructions for what she needs — status information, a database lookup,
+   instructions for what she needs: status information, a database lookup,
    or an action to run.
 5. She waits for the LLM's response, expecting it within the Customer
    Escalation SLA (1 day) if the case is customer-facing.
@@ -38,14 +38,15 @@ inside Genius to look up incident information and to ask it to take action
   highest.
 
 ## Current pains
-- "The LLM decided to delete the database because of instructions I gave for
-  a customer escalation." — the incident described in the case study.
-- "Genius told me an incident's status when it had already been closed for
-  hours."
-- "I ask Genius the same question every day and get a different answer each
-  time."
-- "During the first week of the month, Genius just doesn't respond, or gets
-  it wrong."
+- Routine instructions given for a customer escalation led the LLM to
+  delete the database with no confirmation step in between, the incident
+  described in the case study.
+- Genius shows an incident's status as open for hours after it has actually
+  been closed, leading her to relay stale information to Customers.
+- The same recurring question gets a different answer from Genius each time
+  it's asked, forcing her to double-check before trusting it.
+- During the first week of the month, Genius stops responding or answers
+  incorrectly, right when Customer Escalation volume is highest.
 
 ## What the system gives them
 - A single place to look up incident history and current status before
@@ -55,8 +56,3 @@ inside Genius to look up incident information and to ask it to take action
 - Guardrails so instructions she gives can no longer cause an unreviewed
   destructive action.
 - Consistent, current answers to the recurring questions she asks daily.
-
-## Associated acceptance criteria
-R1, R2 (permission boundary on tool actions) · R3 (status freshness) · R4
-(consistent recurring-question answers) · R7 (availability under peak
-load). See `REDALE.md` §R.

@@ -1,8 +1,8 @@
-# Diego Fernández — Platform Engineer
+# Diego Fernández - Platform Engineer
 
 ## Role
 One of the 50 to 100 engineers who use Genius day to day for Engineering
-Escalations — incidents his own team or another internal team files against
+Escalations, incidents his own team or another internal team files against
 platform systems. He relies on Genius's LLM to pull data, run checks, and
 summarize incident history while he investigates. He is a heavy user during
 normal weeks and the person most affected when Genius degrades under load.
@@ -19,7 +19,7 @@ normal weeks and the person most affected when Genius degrades under load.
 5. He resolves the incident within the 3-day Engineering Escalation SLA and
    closes it in Genius.
 6. In the first week of the month, incident volume spikes and he depends on
-   Genius the most — exactly when it has been least reliable.
+   Genius the most, exactly when it has been least reliable.
 
 ## Needs
 - Needs Genius to stay available and responsive during the first-week peak,
@@ -34,11 +34,13 @@ normal weeks and the person most affected when Genius degrades under load.
   in order to explain what happened if a fix does not work as expected.
 
 ## Current pains
-- "The LLM tends to not respond, or responds wrong, exactly during the first
-  week of the month" — the highest-incident-volume period.
-- "It hallucinates: when it doesn't actually know, it makes something up
-  instead of saying so."
-- "It answers the same question differently depending on when I ask it."
+- During the first week of the month, the highest-incident-volume period,
+  the LLM frequently fails to respond or responds incorrectly.
+- The LLM hallucinates: when it doesn't actually know an answer, it
+  fabricates one instead of saying so.
+- The LLM gives inconsistent answers to the same question depending on when
+  it's asked, undermining the narrowing-down process during an
+  investigation.
 
 ## What the system gives them
 - On-demand incident history and tool-driven diagnostics through the LLM.
@@ -46,8 +48,3 @@ normal weeks and the person most affected when Genius degrades under load.
 - Predictable availability during peak weeks, matched to the 3-day
   Engineering Escalation SLA.
 - A record of every action the LLM took, for after-the-fact review.
-
-## Associated acceptance criteria
-R7, R8 (availability under peak load) · R4 (consistent answers
-mid-investigation) · R6 (explicit "I don't know" instead of hallucination)
-· R9 (tool-action audit trail). See `REDALE.md` §R.
